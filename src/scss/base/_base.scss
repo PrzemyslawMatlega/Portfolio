@@ -1,0 +1,72 @@
+// COLORS 
+$logo-color: rgba(255, 255, 255, 0.897);
+$first-color: rgba(255, 255, 255, 0.836);
+$line-color: rgba(255, 255, 255, 0.089);
+
+// FONTS
+
+$font-logo: 'BenchNine',
+sans-serif;
+$font-one: 'Josefin Sans',
+sans-serif;
+$font-WW: 'Philosopher',
+sans-serif;
+$font-RT: 'Indie Flower',
+cursive;
+
+
+// BP POINTS 
+$XL: 1200px; //<< ZMIENIC UKLAD
+$L : 900px;
+$M : 600px;
+$S : 480px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    
+}
+
+a:hover,
+a:link,
+a:visited,
+a:active{
+    text-decoration: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    @media (min-width: $S) {
+        font-size: 68.75%;
+    }
+
+    @media (min-width: $M) {
+        font-size: 75.0%;
+    }
+
+
+
+}
+
+.container {
+    background: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: [full-start] minmax(1rem, 5%) [center-start] 60% [half] 1fr[center-end] minmax(1rem, 5%) [full-end];
+    grid-template-rows: minmax(10rem, 15vh) min-content min-content min-content;
+    grid-row-gap: 5rem;
+
+    @media (min-width: $XL) {
+        grid-template-rows: minmax(10rem, 15vh) min-content min-content;
+        grid-row-gap: 10rem;
+        
+    }
+
+}
